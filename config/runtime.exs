@@ -144,7 +144,11 @@ if config_env() != :test do
       application_name: "supabase_mt_realtime"
     ],
     after_connect: after_connect_query_args,
-    socket_options: socket_options
+    socket_options: socket_options,
+    ssl: true,
+    ssl_opts: [
+      verify: :verify_none
+    ]
 
   replica_repos = %{
     Realtime.Repo.Replica.FRA => System.get_env("DB_HOST_REPLICA_FRA", default_db_host),

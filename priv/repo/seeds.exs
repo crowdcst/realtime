@@ -31,7 +31,7 @@ Repo.transaction(fn ->
           "region" => "us-east-1",
           "poll_interval_ms" => 100,
           "poll_max_record_bytes" => 1_048_576,
-          "ssl_enforced" => false
+          "ssl_enforced" => true
         }
       }
     ]
